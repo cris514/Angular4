@@ -1,3 +1,32 @@
-<p>
-  empleados works!
-</p>
+<h2>
+{{ titulo_empleados }}!!
+</h2>
+<!-- Accediendo a los valores del objeto empleados -->
+<ul>
+  <li>{{ empleados.nombre }}!!</li>
+  <li>{{ empleados.edad }}!!</li>
+  <li>{{ empleados.cargo}}!!</li>
+  <li>{{ empleados.contratado}}!!</li>
+</ul>
+<hr>
+<!-- Arreglo trabajadores -->
+<ul>
+  <!-- Primer Trabajador -->
+  <li>
+    {{ trabajadores[0].nombre }},
+    {{ trabajadores[0].edad }},
+    {{ trabajadores[0].cargo }},
+    {{ trabajadores[0].contratado }}
+  </li>
+<hr>
+  <!-- Segundo Trabajador -->
+  <li>
+    {{ trabajadores[1].nombre }},
+    {{ trabajadores[1].edad }},
+    {{ trabajadores[1].cargo }},
+    {{ trabajadores[1].contratado }}
+
+
+  </li>
+
+</ul>
