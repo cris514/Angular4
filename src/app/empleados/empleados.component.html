@@ -25,8 +25,40 @@
     {{ trabajadores[1].edad }},
     {{ trabajadores[1].cargo }},
     {{ trabajadores[1].contratado }}
-
-
   </li>
-
 </ul>
+
+<!--  //Uso de directiva ngIf-->
+<!--  //Ejemplo de reactividad-->
+
+<!-- Accediendo a los valores del objeto empleados -->
+<div *ngIf="trabajador_externo == true" ><!-- ngIf, funciona como una condicion IF-->
+  <!-- Uso de directiva evento (click)-->
+  <!-- Llamos la funcion "cambiarExterno" del componente empleados-->
+  <!-- Le pasamod el parametro(valor) false-->
+  <button (click)="cambiarExterno(false)"> Mostrar trabajadores</button>
+    <ul>
+      <li>{{ empleados.nombre }}!!</li>
+      <li *ngIf="empleados.edad == 30">{{ empleados.edad }} de edad: tiene bono!!!!</li>
+      <li></li>
+      <li>{{ empleados.cargo}}!!</li>
+      <li>{{ empleados.contratado}}!!</li>
+      <li *ngIf="empleados.contratado == true">Esta contratado!!</li>
+      <li *ngIf="empleados.contratado == False">NO Esta contratado!!</li>
+    </ul>
+</div>
+
+<div *ngIf="trabajador_externo == false" ><!-- ngIf, funciona como una condicion IF-->
+  <!-- Uso de directiva evento (click)-->
+  <!-- Llamos la funcion "cambiarExterno" del componente empleados-->
+  <!-- Le pasamos el parametro(valor) true-->
+  <button (click)="cambiarExterno(true)"> Mostrar Empleados</button>
+    <ul>
+        <li>{{ trabajadores[1].nombre }}</li>
+        <li>{{ trabajadores[1].edad }}</li>
+        <li>{{ trabajadores[1].cargo }}</li>
+        <li> {{ trabajadores[1].contratado }}</li>
+        <li *ngIf="trabajadores[1].contratado == true">Esta contratado!!</li>
+        <li *ngIf="trabajadores[1].contratado == False">NO Esta contratado!!</li>
+    </ul>
+</div>
