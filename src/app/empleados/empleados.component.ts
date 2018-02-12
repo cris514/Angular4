@@ -22,7 +22,8 @@ export class EmpleadosComponent  {
        this.empleados = new Empleados( "Primer empleado",30,"Chofer",true);
        this.trabajadores = [
          new Empleados( "Primer trabajador",29,"Programador",true),
-         new Empleados( "segundo trabajador",35,"Diseñador",true)
+         new Empleados( "Segundotrabajador",35,"Diseñador",true),
+         new Empleados( "Tercer trabajador",40,"UI",true)
        ];
 
        //Asignando valor a trabajador_externo.
