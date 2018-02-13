@@ -108,3 +108,27 @@
 <ul [ngSwitch]="color">
   <li *ngSwitchCase="'yellow'" [ngStyle]="{'background':color, 'color': 'white', 'padding': '20px'  }">YELLOW</li>
 </ul>
+
+<hr>
+
+  <!-- Ejemplo de two way data-binding. -->
+<h3>Selector de colores</h3>
+<input type="text" [(ngModel)]="color_seleccionado"/>
+<!--
+[(ngModel)], permite modificar de forma bidireccional,
+le va a indicar que propiedad voy a modificar de mi classe del componente,
+cuando yo modifique el input.
+-->
+
+<pre>
+  <strong>Color elegido:</strong>
+  {{ color_seleccionado}}  <!-- Mostrando los datos de la propiedad color_seleccionado. -->
+</pre>
+  <!-- Creacion de cuadro -->
+<div [ngStyle]="{
+    'background':color_seleccionado,
+    'width': '200px',
+    'height': '200px',
+    'margin-left': '350px'
+
+  }"><div style="clean:both"></div>

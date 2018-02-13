@@ -17,6 +17,8 @@ export class EmpleadosComponent  {
      public trabajador_externo:boolean;
 
      public color:string;
+     //Utilizada par el Ejemplo de two way data-binding.
+     public color_seleccionado:string;
 
      constructor(){
 //Definimos lo valores que llevaran nuestros objetos de la clase Empleados(empleados.ts)
@@ -30,8 +32,10 @@ export class EmpleadosComponent  {
        //Asignando valor a trabajador_externo.
        //Uso de directiva ngIf
        this.trabajador_externo = true;
-
+       //Asignacion de valor a color.
        this.color = "red";
+       //Asignacion de valor a color_seleccionado.
+       this.color_seleccionado = "#ccc";
 
      }
 
