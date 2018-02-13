@@ -8,7 +8,9 @@
   <li>{{ empleados.cargo}}!!</li>
   <li>{{ empleados.contratado}}!!</li>
 </ul>
+
 <hr>
+
 <!-- Arreglo trabajadores -->
 <ul>
   <!-- Primer Trabajador -->
@@ -27,6 +29,8 @@
     {{ trabajadores[1].contratado }}
   </li>
 </ul>
+
+
 <hr>
 
 <!--  //Uso de directiva ngIf-->
@@ -66,6 +70,7 @@
 </div>
 
 <hr>
+
 <h3>lISTADO DE EMPLEADOS</h3>
 <ul>
     <!-- 1 Ejempllo de *ngIf -->
@@ -85,4 +90,21 @@
         <li *ngIf="empleados.contratado == False">NO Esta contratado!!</li>
       </ul>
   </li>
+</ul>
+
+<hr>
+    <!-- Ejempllo de *ngSwitch con COLORES -->
+<h3>Colores Switch</h3>
+
+<ul [ngSwitch]="color">
+  <li *ngSwitchCase="'red'" [ngStyle]="{'background':color, 'color': 'white', 'padding': '20px'  }">ROJO</li>
+  <!-- 'background':color, La propiedad color la esta tomando del componente empleados. -->
+</ul>
+
+<ul [ngSwitch]="color">
+  <li *ngSwitchCase="'green'" [ngStyle]="{'background':color, 'color': 'white', 'padding': '20px'  }">GREEN</li>
+</ul>
+
+<ul [ngSwitch]="color">
+  <li *ngSwitchCase="'yellow'" [ngStyle]="{'background':color, 'color': 'white', 'padding': '20px'  }">YELLOW</li>
 </ul>
