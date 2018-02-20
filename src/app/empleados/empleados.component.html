@@ -120,7 +120,9 @@ le va a indicar que propiedad voy a modificar de mi classe del componente,
 cuando yo modifique el input.
 -->
 
-<pre>
+<!-- [style.border], permite generar un borde negro, cuando ponemos el color rojo -->
+<pre [style.border]="color_seleccionado == 'red' ? '5px solid black' : '1px solid white'"
+     [class.fondoAzul]="color_seleccionado == 'blue'">
   <strong>Color elegido:</strong>
   {{ color_seleccionado}}  <!-- Mostrando los datos de la propiedad color_seleccionado. -->
 </pre>
