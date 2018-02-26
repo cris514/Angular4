@@ -122,7 +122,11 @@ cuando yo modifique el input.
 
 <!-- [style.border], permite generar un borde negro, cuando ponemos el color rojo -->
 <pre [style.border]="color_seleccionado == 'red' ? '5px solid black' : '1px solid white'"
-     [class.fondoAzul]="color_seleccionado == 'blue'">
+     [ngClass]="{
+       fondoAzul: color_seleccionado == 'blue',
+       fondoVerde: color_seleccionado == 'green'
+     }"
+     >
   <strong>Color elegido:</strong>
   {{ color_seleccionado}}  <!-- Mostrando los datos de la propiedad color_seleccionado. -->
 </pre>
