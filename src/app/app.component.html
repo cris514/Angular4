@@ -18,6 +18,21 @@
 
 <!--<<app-empleados> </app-empleados>-->
 
+<hr>
+  <nav>
+    <a [routerLink]="['/app-home']">HOME</a><!-- [routerLink] es una directiva que permite configurar los enlaces dinamicamente.-->
+    -
+    <a [routerLink]="['/app-frutas']">FRUTAS</a>
+    -
+    <a [routerLink]="['/app-empleados']">EMPLEADOS</a>
+    -
+    <a [routerLink]="['/app-contacto']">CONTACTO</a>
+  </nav>
+
+
+
+
+
 <router-outlet></router-outlet><!--Carga de la ruta actual del coponente-->
 
 </div>

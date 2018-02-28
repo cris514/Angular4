@@ -5,8 +5,11 @@ import { FormsModule } from '@angular/forms';//Necesario para utilizar el two wa
 import { AppComponent } from './app.component';
 import { FrutasComponent } from './frutas/frutas.component';
 import { EmpleadosComponent } from './empleados/empleados.component';
+import { HomeComponent } from './home/home.component';
+import { ContactoComponent } from './contacto/contacto.component';
 //Importacion de routing
 import {routing, appRoutingProviders } from './app.routing';
+
 
 
 //Declaracion de los nombres de los componenetes.
@@ -14,7 +17,9 @@ import {routing, appRoutingProviders } from './app.routing';
   declarations: [
     AppComponent,
     FrutasComponent,
-    EmpleadosComponent
+    EmpleadosComponent,
+    HomeComponent,
+    ContactoComponent
 
   ],
   imports: [
