@@ -20,13 +20,16 @@
 
 <hr>
   <nav>
-    <a [routerLink]="['/app-home']">HOME</a><!-- [routerLink] es una directiva que permite configurar los enlaces dinamicamente.-->
+    <a [routerLink]="['/app-home']" [routerLinkActive]="['link-activo']">HOME</a>
+    <!-- [routerLink] es una directiva que permite configurar los enlaces dinamicamente.-->
+    <!-- [routerLinkActive] es una directiva que permite destacar con color, el elemento del menu, que este activo.-->
+    <!-- link-activo, nombre de la clase en style.css.-->
     -
-    <a [routerLink]="['/app-frutas']">FRUTAS</a>
+    <a [routerLink]="['/app-frutas']" [routerLinkActive]="['link-activo']">FRUTAS</a>
     -
-    <a [routerLink]="['/app-empleados']">EMPLEADOS</a>
+    <a [routerLink]="['/app-empleados']" [routerLinkActive]="['link-activo']">EMPLEADOS</a>
     -
-    <a [routerLink]="['/app-contacto']">CONTACTO</a>
+    <a [routerLink]="['/app-contacto']" [routerLinkActive]="['link-activo']">CONTACTO</a>
   </nav>
 
 
